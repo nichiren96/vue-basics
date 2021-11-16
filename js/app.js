@@ -2,11 +2,11 @@ const app = Vue.createApp({
     data() {
         return {
             showPlayers: true,
-            name: 'Lionel Messi',
-            club: 'PSG',
-            age: 34,
-            x: 0,
-            y: 0
+            players: [
+                { name:'Lionel Messi', club: 'PSG' },
+                { name:'Memphis Depay', club: 'FC Barcelona' },
+                { name:'Cristiano Ronaldo', club: 'Man United' },
+            ]
         }
     },
 
@@ -15,17 +15,6 @@ const app = Vue.createApp({
             this.showPlayers = !this.showPlayers
         },
 
-        handleEvent(e, data) {
-            console.log(e, e.type)
-            if (data) {
-                console.log(data)
-            }
-        },
-
-        handleMousemove(e) {
-            this.x = e.offsetX
-            this.y = e.offsetY
-        }
     }
 })
 
