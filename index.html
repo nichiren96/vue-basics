@@ -21,9 +21,14 @@
     
     <div id="app">
 
+        <!-- attribute binding -->
+        <a v-bind:href="url">Google</a>
+        <!-- <a :href="url">Link</a> -->
+
         <div v-if="showPlayers">
             <ul>
                 <li v-for="player in players">
+                    <img :src="player.img" :alt="player.name" width="50" height="50"/>
                     {{ player.name }} - {{ player.club }}
                 </li>
             </ul>
