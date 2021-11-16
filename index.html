@@ -29,7 +29,7 @@
 
         <div v-if="showPlayers">
             <ul>
-                <li v-for="player in players" :class="{ uclWinner: player.wonUcl }" @click="toggleUclWinner(player)">
+                <li v-for="player in filteredPlayers" :class="{ uclWinner: player.wonUcl }" @click="toggleUclWinner(player)">
                     <img :src="player.img" :alt="player.name" width="50" height="50"/>
                     {{ player.name }} - {{ player.club }}
                 </li>

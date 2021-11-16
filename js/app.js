@@ -20,6 +20,12 @@ const app = Vue.createApp({
             player.wonUcl = !player.wonUcl
         }
 
+    },
+
+    computed: {
+        filteredPlayers() {
+            return this.players.filter((player) => player.wonUcl)
+        }
     }
 })
 
