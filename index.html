@@ -7,14 +7,15 @@
     <title>Learn Vue</title>
     <script src="js/vue.js"></script>
     <style>
-        .box {
-            padding: 100px 0;
-            width: 400px;
-            text-align: center;
-            background: #ddd;
-            margin: 20px;
-            display: inline-block;
+        body {
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
         }
+
+        li.uclWinner {
+            background: darkslateblue;
+            color: white;
     </style>
 </head>
 <body>
@@ -27,7 +28,7 @@
 
         <div v-if="showPlayers">
             <ul>
-                <li v-for="player in players">
+                <li v-for="player in players" :class="{ uclWinner: player.wonUcl }">
                     <img :src="player.img" :alt="player.name" width="50" height="50"/>
                     {{ player.name }} - {{ player.club }}
                 </li>
