@@ -16,6 +16,10 @@ const app = Vue.createApp({
             this.showPlayers = !this.showPlayers
         },
 
+        toggleUclWinner(player) {
+            player.wonUcl = !player.wonUcl
+        }
+
     }
 })
 
