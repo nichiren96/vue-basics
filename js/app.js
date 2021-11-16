@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
+            showPlayers: true,
             name: 'Lionel Messi',
             club: 'PSG',
             age: 34
@@ -8,8 +9,8 @@ const app = Vue.createApp({
     },
 
     methods: {
-        changeName(playerName){
-            this.name = playerName
+        toggleShowPlayers() {
+            this.showPlayers = !this.showPlayers
         }
     }
 })

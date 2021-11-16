@@ -10,11 +10,21 @@
 <body>
     
     <div id="app">
-        <p>{{ name }} - {{ club }} - {{ age }}</p>
 
-        <button v-on:click="age++">Increase age</button>
-        <button v-on:click="age--">Decrease age</button>
-        <div @click="changeName('Neymar Junior')">Change name</div>
+        <div v-if="showPlayers">
+            <p>{{ name }} - {{ club }} - {{ age }}</p>
+        </div>
+        
+        <button @click="toggleShowPlayers">
+            <span v-if="showPlayers">
+                Hide players
+            </span>
+            <span v-else>
+                Show players
+            </span>
+        </button>
+
+        <div v-show="showPlayers">currently showing players</div>
     </div>
     <script src="js/app.js"></script>
 </body>
