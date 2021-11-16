@@ -5,6 +5,12 @@ const app = Vue.createApp({
             club: 'PSG',
             age: 34
         }
+    },
+
+    methods: {
+        changeName(playerName){
+            this.name = playerName
+        }
     }
 })
 
